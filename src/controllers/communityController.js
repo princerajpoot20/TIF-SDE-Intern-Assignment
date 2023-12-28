@@ -174,3 +174,48 @@ exports.getAllMembers = async (req, res) => {
         res.status(500).json({ message: 'Internal server error', error: error.message });
     }
 };
+
+exports.getMyJoinedCommunities = async (req, res) => {
+    try {
+        const userId = req.user._id; // Signed-in user ID
+        const page = parseInt(req.query.page) || 1;
+        const limit = 10; // 10 documents per page
+        const skip = (page - 1) * limit;
+
+        // Get total number of communities the user has joined
+        const total = await Member.countDocuments({ user: userId });
+
+        // Fetch communities joined by the user
+        const memberEntries = await Member.find({ user: userId })
+            .skip(skip)
+            .limit(limit)
+            .populate({
+                path: 'community',
+                populate: { path: 'owner', select: 'id name' }
+            });
+
+        const communities = memberEntries.map(member => member.community);
+
+        res.status(200).json({
+            status: true,
+            content: {
+                meta: {
+                    total: total,
+                    pages: Math.ceil(total / limit),
+                    page: page
+                },
+                data: communities.map(community => ({
+                    id: community._id,
+                    name: community.name,
+                    slug: community.slug,
+                    owner: { id: community.owner._id, name: community.owner.name },
+                    created_at: community.createdAt,
+                    updated_at: community.updatedAt
+                }))
+            }
+        });
+    } catch (error) {
+        console.error('Error in getMyJoinedCommunities:', error);
+        res.status(500).json({ message: 'Internal server error', error: error.message });
+    }
+};
