@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Endpoints</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        h2 {
+            text-align: center;
+            padding: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 0 10px;
+            }
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>The Internet Folks: SDE Intern Assignment</h2>
+        <h3>API Endpoints</h3>
+        <table>
+            <tr>
+                <th>Module</th>
+                <th>Endpoint Name</th>
+                <th>URL</th>
+                <th>Request Type</th>
+            </tr>
+            <!-- Role Module -->
+            <tr>
+                <td rowspan="2">Role</td>
+                <td>Create Role</td>
+                <td><a href="/v1/role">/v1/role</a></td>
+                <td>POST</td>
+            </tr>
+            <tr>
+                <td>Get All Roles</td>
+                <td><a href="/v1/role">/v1/role</a></td>
+                <td>GET</td>
+            </tr>
+            <!-- User Module -->
+            <tr>
+                <td rowspan="3">User</td>
+                <td>User Sign Up</td>
+                <td><a href="/v1/auth/signup">/v1/auth/signup</a></td>
+                <td>POST</td>
+            </tr>
+            <tr>
+                <td>User Sign In</td>
+                <td><a href="/v1/auth/signin">/v1/auth/signin</a></td>
+                <td>POST</td>
+            </tr>
+            <tr>
+                <td>Get User Information</td>
+                <td><a href="/v1/auth/me">/v1/auth/me</a></td>
+                <td>GET</td>
+            </tr>
+            <!-- Community Module -->
+            <tr>
+                <td rowspan="5">Community</td>
+                <td>Create Community</td>
+                <td><a href="/v1/community">/v1/community</a></td>
+                <td>POST</td>
+            </tr>
+            <tr>
+                <td>Get All Communities</td>
+                <td><a href="/v1/community">/v1/community</a></td>
+                <td>GET</td>
+            </tr>
+            <tr>
+                <td>Get All Members of a Community</td>
+                <td><a href="/v1/community/:id/members">/v1/community/:id/members</a></td>
+                <td>GET</td>
+            </tr>
+            <tr>
+                <td>Get Communities Owned by User</td>
+                <td><a href="/v1/community/me/owner">/v1/community/me/owner</a></td>
+                <td>GET</td>
+            </tr>
+            <tr>
+                <td>Get Communities Joined by User</td>
+                <td><a href="/v1/community/me/member">/v1/community/me/member</a></td>
+                <td>GET</td>
+            </tr>
+            <!-- Member Module -->
+            <tr>
+                <td rowspan="2">Member</td>
+                <td>Add Member to Community</td>
+                <td><a href="/v1/member">/v1/member</a></td>
+                <td>POST</td>
+            </tr>
+            <tr>
+                <td>Remove Member from Community</td>
+                <td><a href="/v1/member/:id">/v1/member/:id</a></td>
+                <td>DELETE</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

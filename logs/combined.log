@@ -164,3 +164,23 @@
 2023-12-28T15:48:33.875Z [32minfo[39m: POST /v1/member 400 106 - 1871.808 ms
 2023-12-28T15:48:55.029Z [32minfo[39m: GET /v1/community/me/member 401 95 - 2.776 ms
 2023-12-28T15:49:01.434Z [32minfo[39m: GET /v1/community/me/member 200 269 - 1216.873 ms
+2023-12-28T18:46:59.363Z [32minfo[39m: Server running on port 3001
+2023-12-28T18:47:02.312Z [32minfo[39m: MongoDB Connected
+2023-12-28T18:47:10.408Z [32minfo[39m: GET / 500 58 - 3.460 ms
+2023-12-28T18:47:10.473Z [32minfo[39m: GET /favicon.ico 404 150 - 1.034 ms
+2023-12-28T18:49:27.000Z [32minfo[39m: Server running on port 3001
+2023-12-28T18:49:29.858Z [32minfo[39m: MongoDB Connected
+2023-12-28T18:49:30.799Z [32minfo[39m: GET / 200 599 - 2.087 ms
+2023-12-28T18:49:30.807Z [32minfo[39m: GET /Hello%20there.webp 200 396636 - 0.515 ms
+2023-12-28T18:50:21.484Z [32minfo[39m: GET / 304 - - 0.910 ms
+2023-12-28T18:50:21.492Z [32minfo[39m: GET /Hello%20there.webp 304 - - 0.441 ms
+2023-12-28T18:55:41.377Z [32minfo[39m: GET / 200 2493 - 0.579 ms
+2023-12-28T18:59:48.356Z [32minfo[39m: GET / 200 4058 - 0.568 ms
+2023-12-28T18:59:50.903Z [32minfo[39m: GET /v1/role 200 751 - 503.228 ms
+2023-12-28T18:59:56.471Z [32minfo[39m: GET /v1/role 304 - - 530.942 ms
+2023-12-28T19:01:37.743Z [32minfo[39m: GET / 200 4117 - 2.441 ms
+2023-12-28T19:01:39.325Z [32minfo[39m: GET / 304 - - 1.011 ms
+2023-12-28T19:01:50.589Z [32minfo[39m: GET / 200 4117 - 2.431 ms
+2023-12-28T19:01:58.061Z [32minfo[39m: GET / 200 4117 - 0.865 ms
+2023-12-28T19:02:41.875Z [32minfo[39m: GET / 200 4112 - 0.516 ms
+2023-12-28T19:04:05.819Z [32minfo[39m: GET /v1/auth/me 401 95 - 0.718 ms

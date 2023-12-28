@@ -7,6 +7,7 @@ const config = require('./config/config');
 const logger = require('./utils/logger');
 const errorHandler = require('./middlewares/errorHandler');
 const authMiddleware = require('./middlewares/authMiddleware');
+const path = require('path');
 
 console.log('Initializing Express...');
 const app = express();
@@ -16,6 +17,12 @@ console.log('Applying middlewares...');
 app.use(cors());
 app.use(bodyParser.json());
 app.use(morgan('tiny', { stream: logger.stream }));
+
+// Serve static files
+app.use(express.static(path.join(__dirname, '..', 'public')));
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+});
 
 // Database Connection
 console.log('Connecting to MongoDB...');
