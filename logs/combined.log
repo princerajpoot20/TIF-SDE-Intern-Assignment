@@ -1,0 +1,49 @@
+2023-12-28T00:11:50.004Z [32minfo[39m: POST /v1/member 500 35 - 1009.603 ms
+2023-12-28T00:12:20.014Z [32minfo[39m: GET /v1/community 200 270 - 902.916 ms
+2023-12-28T00:12:45.610Z [32minfo[39m: POST /v1/member 500 35 - 1066.833 ms
+2023-12-28T00:12:51.657Z [32minfo[39m: POST /v1/member 500 35 - 1061.116 ms
+2023-12-28T00:14:59.654Z [32minfo[39m: POST /v1/member 500 35 - 1248.972 ms
+2023-12-28T00:15:43.485Z [32minfo[39m: POST /v1/member 500 35 - 1052.120 ms
+2023-12-28T00:16:21.780Z [32minfo[39m: POST /v1/member 500 35 - 1136.972 ms
+2023-12-28T00:16:42.651Z [32minfo[39m: POST /v1/community 500 35 - 250.870 ms
+2023-12-28T00:16:45.991Z [32minfo[39m: GET /v1/community 200 270 - 757.590 ms
+2023-12-28T00:17:01.256Z [32minfo[39m: POST /v1/member 500 35 - 1000.882 ms
+2023-12-28T00:17:34.903Z [32minfo[39m: Server running on port 3001
+2023-12-28T00:17:37.805Z [32minfo[39m: MongoDB Connected
+2023-12-28T00:17:42.556Z [32minfo[39m: POST /v1/member 500 35 - 1021.693 ms
+2023-12-28T00:20:37.236Z [32minfo[39m: Server running on port 3001
+2023-12-28T00:20:40.503Z [32minfo[39m: MongoDB Connected
+2023-12-28T00:20:43.764Z [32minfo[39m: POST /v1/member 201 215 - 1009.138 ms
+2023-12-28T00:23:28.901Z [32minfo[39m: Server running on port 3001
+2023-12-28T00:23:31.772Z [32minfo[39m: MongoDB Connected
+2023-12-28T00:23:37.508Z [32minfo[39m: POST /v1/member 400 106 - 1765.729 ms
+2023-12-28T00:24:14.433Z [32minfo[39m: POST /v1/member 201 215 - 2049.684 ms
+2023-12-28T00:24:18.827Z [32minfo[39m: POST /v1/member 400 106 - 1693.059 ms
+2023-12-28T00:24:22.335Z [32minfo[39m: POST /v1/member 500 158 - 730.444 ms
+2023-12-28T00:24:36.277Z [32minfo[39m: POST /v1/member 500 158 - 536.884 ms
+2023-12-28T00:24:42.551Z [32minfo[39m: POST /v1/member 400 106 - 1817.602 ms
+2023-12-28T00:25:10.308Z [32minfo[39m: POST /v1/member 400 106 - 1725.760 ms
+2023-12-28T00:25:17.875Z [32minfo[39m: POST /v1/member 403 116 - 1581.704 ms
+2023-12-28T00:25:28.528Z [32minfo[39m: POST /v1/member 500 163 - 250.882 ms
+2023-12-28T00:25:41.260Z [32minfo[39m: POST /v1/member 500 163 - 244.167 ms
+2023-12-28T00:25:53.413Z [32minfo[39m: POST /v1/member 500 140 - 244.200 ms
+2023-12-28T00:26:21.254Z [32minfo[39m: POST /v1/member 500 143 - 241.675 ms
+2023-12-28T00:26:24.776Z [32minfo[39m: POST /v1/member 500 143 - 242.539 ms
+2023-12-28T09:38:55.899Z [32minfo[39m: Server running on port 3001
+2023-12-28T09:38:58.759Z [32minfo[39m: MongoDB Connected
+2023-12-28T09:39:15.959Z [32minfo[39m: POST /v1/member 401 95 - 2.033 ms
+2023-12-28T09:39:32.352Z [32minfo[39m: POST /v1/auth/signin 401 33 - 266.146 ms
+2023-12-28T09:40:01.956Z [32minfo[39m: POST /v1/auth/signin 500 35 - 266.397 ms
+2023-12-28T09:40:32.183Z [32minfo[39m: POST /v1/auth/signin 500 35 - 256.255 ms
+2023-12-28T09:41:52.260Z [32minfo[39m: GET /v1/auth/signin 404 153 - 1.497 ms
+2023-12-28T09:41:56.545Z [32minfo[39m: POST /v1/auth/signin 500 35 - 255.292 ms
+2023-12-28T09:43:07.915Z [32minfo[39m: POST /v1/auth/signin 500 35 - 257.368 ms
+2023-12-28T09:43:09.254Z [32minfo[39m: POST /v1/auth/signin 500 35 - 251.908 ms
+2023-12-28T09:43:37.375Z [32minfo[39m: Server running on port 3001
+2023-12-28T09:43:40.406Z [32minfo[39m: MongoDB Connected
+2023-12-28T09:43:45.618Z [32minfo[39m: POST /v1/auth/signin 500 35 - 250.954 ms
+2023-12-28T09:43:57.062Z [32minfo[39m: GET /v1/auth/community 404 156 - 2.844 ms
+2023-12-28T09:44:00.706Z [32minfo[39m: GET /v1/community 200 270 - 852.424 ms
+2023-12-28T09:44:13.863Z [32minfo[39m: GET /v1/auth/me 401 95 - 6.850 ms
+2023-12-28T09:45:15.612Z [32minfo[39m: GET /v1/auth/signup 404 153 - 0.291 ms
+2023-12-28T09:45:19.909Z [32minfo[39m: POST /v1/auth/signup 500 35 - 242.587 ms
