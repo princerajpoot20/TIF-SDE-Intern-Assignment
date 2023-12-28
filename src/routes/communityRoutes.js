@@ -6,5 +6,6 @@ const authenticate = require('../middlewares/authMiddleware');
 router.post('/', authenticate, communityController.createCommunity);
 router.get('/', communityController.getAllCommunities);
 router.get('/me/owner', authenticate, communityController.getMyOwnedCommunities);
+router.get('/:slug/members', communityController.getAllMembers);
 
 module.exports = router;

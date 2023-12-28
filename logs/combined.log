@@ -124,3 +124,26 @@
 2023-12-28T14:53:17.728Z [32minfo[39m: DELETE /v1/member/658cc02e98b60da480852f0c 404 87 - 558.565 ms
 2023-12-28T14:54:04.510Z [32minfo[39m: DELETE /v1/member/658d83cf09e38550692e6eae 403 98 - 1313.952 ms
 2023-12-28T14:54:11.652Z [32minfo[39m: DELETE /v1/member/658d83cf09e38550692e6eae 200 15 - 1525.833 ms
+2023-12-28T15:16:54.193Z [32minfo[39m: Server running on port 3001
+2023-12-28T15:16:59.080Z [32minfo[39m: MongoDB Connected
+2023-12-28T15:17:17.999Z [32minfo[39m: DELETE /v1/community/westworld/member 404 171 - 1.199 ms
+2023-12-28T15:17:22.179Z [32minfo[39m: GET /v1/community/westworld/member 404 168 - 0.709 ms
+2023-12-28T15:17:35.180Z [32minfo[39m: GET /v1/community/westworld/members 401 95 - 8.787 ms
+2023-12-28T15:18:26.947Z [32minfo[39m: GET /v1/community/westworld/members 401 95 - 2.136 ms
+2023-12-28T15:19:13.864Z [32minfo[39m: GET /v1/community/Ab/members 401 95 - 2.086 ms
+2023-12-28T15:19:41.951Z [32minfo[39m: GET /v1/community/Ab/members 401 95 - 1.416 ms
+2023-12-28T15:22:17.257Z [32minfo[39m: Server running on port 3001
+2023-12-28T15:22:20.538Z [32minfo[39m: MongoDB Connected
+2023-12-28T15:22:22.781Z [32minfo[39m: GET /v1/community/westworld/members 500 147 - 10.613 ms
+2023-12-28T15:22:24.199Z [32minfo[39m: GET /v1/community/westworld/members 500 147 - 1.444 ms
+2023-12-28T15:24:02.689Z [32minfo[39m: GET /v1/community/westworld/members 500 147 - 1.529 ms
+2023-12-28T15:24:09.095Z [32minfo[39m: GET /v1/community/westworld/members 500 147 - 16.159 ms
+2023-12-28T15:32:41.263Z [32minfo[39m: Server running on port 3001
+2023-12-28T15:32:44.220Z [32minfo[39m: MongoDB Connected
+2023-12-28T15:32:46.191Z [32minfo[39m: GET /v1/community/westworld/members 404 90 - 240.447 ms
+2023-12-28T15:32:58.106Z [32minfo[39m: GET /v1/community/Abc/members 404 90 - 251.697 ms
+2023-12-28T15:33:01.733Z [32minfo[39m: GET /v1/community/abc/members 200 767 - 1007.588 ms
+2023-12-28T15:35:28.788Z [32minfo[39m: GET /v1/community/abc/members?page=2 200 75 - 839.397 ms
+2023-12-28T15:35:32.555Z [32minfo[39m: GET /v1/community/abc/members?page=1 200 767 - 1019.806 ms
+2023-12-28T15:35:34.960Z [32minfo[39m: GET /v1/community/abc/members?page=3 200 75 - 753.441 ms
+2023-12-28T15:35:56.022Z [32minfo[39m: GET /v1/community/abc/members?page=2 200 75 - 792.789 ms

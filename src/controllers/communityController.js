@@ -126,4 +126,51 @@ exports.getMyOwnedCommunities = async (req, res) => {
     }
 };
 
+exports.getAllMembers = async (req, res) => {
+    try {
+        const communitySlug = req.params.slug;
+        const page = parseInt(req.query.page) || 1;
+        const limit = 10; // 10 documents per page
+        const skip = (page - 1) * limit;
 
+        // Find community by slug
+        const community = await Community.findOne({ slug: communitySlug });
+        if (!community) {
+            return res.status(404).json({
+                status: false,
+                errors: [{ message: "Community not found.", code: "RESOURCE_NOT_FOUND" }]
+            });
+        }
+
+        // Get total number of members in the community
+        const total = await Member.countDocuments({ community: community._id });
+
+        // Fetch members with user and role details
+        const members = await Member.find({ community: community._id })
+            .skip(skip)
+            .limit(limit)
+            .populate('user', 'id name')
+            .populate('role', 'id name');
+
+        res.status(200).json({
+            status: true,
+            content: {
+                meta: {
+                    total: total,
+                    pages: Math.ceil(total / limit),
+                    page: page
+                },
+                data: members.map(member => ({
+                    id: member._id,
+                    community: member.community,
+                    user: { id: member.user._id, name: member.user.name },
+                    role: { id: member.role._id, name: member.role.name },
+                    created_at: member.createdAt
+                }))
+            }
+        });
+    } catch (error) {
+        console.error('Error in getAllMembers:', error);
+        res.status(500).json({ message: 'Internal server error', error: error.message });
+    }
+};
