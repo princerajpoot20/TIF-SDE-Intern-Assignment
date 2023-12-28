@@ -1,4 +1,15 @@
-# API Endpoints
+# Update as of now:
+- Implemented all the endpoints mentioned in the assignment.
+- I am working on the `Brownie Points` , I am not able to complete these `Brownie Points` within these 3 days because I am on **vacation (Christmas and New Year vacation).**
+
+
+# How to run it locally
+- Clone this repo
+- Execute these command: `npm install` and `npm start`
+
+
+
+## API Endpoints
 
 This document lists all the API endpoints for the SaaS platform.
 
