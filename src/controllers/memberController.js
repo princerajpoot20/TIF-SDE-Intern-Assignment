@@ -88,24 +88,44 @@ exports.addMember = async (req, res) => {
 };
 
 
+exports.removeMember = async (req, res) => {
+    try {
+        const memberId = req.params.id;
+        const requestorId = req.user._id; // Signed-in user ID
 
+        // Find the member to be removed
+        const memberToRemove = await Member.findById(memberId);
+        if (!memberToRemove) {
+            return res.status(404).json({
+                status: false,
+                errors: [{ message: "Member not found.", code: "RESOURCE_NOT_FOUND" }]
+            });
+        }
 
-// need to reimplement the below funtion
+        // Check if requestor is Community Admin or Moderator
+        const adminRole = await Role.findOne({ name: 'Community Admin' });
+        const moderatorRole = await Role.findOne({ name: 'Community Moderator' });
 
-// exports.getAllMembers = async (req, res) => {
-//     try {
-//         const { communityId } = req.params;
-        
-//         // Fetch members
-//         const members = await Member.find({ community: communityId }).populate('user', 'name');
+        const isAdminOrModerator = await Member.findOne({
+            community: memberToRemove.community,
+            user: requestorId,
+            role: { $in: [adminRole._id, moderatorRole._id] }
+        });
 
-//         res.status(200).json({
-//             message: 'Members fetched successfully',
-//             data: members
-//         });
-//     } catch (error) {
-//         res.status(500).json({ message: 'Internal server error' });
-//     }
-// };
+        if (!isAdminOrModerator) {
+            return res.status(403).json({
+                status: false,
+                errors: [{ message: "Not allowed to remove member", code: "NOT_ALLOWED_ACCESS" }]
+            });
+        }
 
-// Implement other member-related methods as needed
+        // Remove the member
+        await memberToRemove.remove();
+
+        res.status(200).json({ status: true });
+    } catch (error) {
+        console.error('Error in removeMember:', error);
+        res.status(500).json({ message: 'Internal server error', error: error.message });
+    }
+};
+

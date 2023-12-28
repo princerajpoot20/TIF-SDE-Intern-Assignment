@@ -44,6 +44,7 @@ exports.signup = async (req, res) => {
             }
         });
     } catch (error) {
+        console.error('Error in signup/signin:', error);
         res.status(500).json({ message: 'Internal server error' });
     }
 };
@@ -82,6 +83,7 @@ exports.signin = async (req, res) => {
             }
         });
     } catch (error) {
+        console.error('Error in signup/signin:', error);
         res.status(500).json({ message: 'Internal server error' });
     }
 };

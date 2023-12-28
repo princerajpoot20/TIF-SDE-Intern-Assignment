@@ -47,3 +47,56 @@
 2023-12-28T09:44:13.863Z [32minfo[39m: GET /v1/auth/me 401 95 - 6.850 ms
 2023-12-28T09:45:15.612Z [32minfo[39m: GET /v1/auth/signup 404 153 - 0.291 ms
 2023-12-28T09:45:19.909Z [32minfo[39m: POST /v1/auth/signup 500 35 - 242.587 ms
+2023-12-28T13:42:19.664Z [32minfo[39m: Server running on port 3001
+2023-12-28T13:42:23.234Z [32minfo[39m: MongoDB Connected
+2023-12-28T13:42:36.377Z [32minfo[39m: POST /v1/auth/signup 500 35 - 251.907 ms
+2023-12-28T13:43:12.911Z [32minfo[39m: GET /v1/role 200 608 - 516.535 ms
+2023-12-28T13:43:22.266Z [32minfo[39m: GET /v1/auth/signin 404 153 - 4.173 ms
+2023-12-28T13:43:36.223Z [32minfo[39m: POST /v1/auth/signin 500 35 - 252.116 ms
+2023-12-28T13:45:55.793Z [32minfo[39m: Server running on port 3001
+2023-12-28T13:45:58.389Z [32minfo[39m: MongoDB Connected
+2023-12-28T13:46:07.227Z [32minfo[39m: POST /v1/auth/signin 500 35 - 255.997 ms
+2023-12-28T13:56:40.486Z [32minfo[39m: POST /v1/auth/signup 400 33 - 248.796 ms
+2023-12-28T13:56:52.792Z [32minfo[39m: POST /v1/auth/signup 500 35 - 248.304 ms
+2023-12-28T14:03:43.152Z [32minfo[39m: Server running on port 3001
+2023-12-28T14:03:45.912Z [32minfo[39m: MongoDB Connected
+2023-12-28T14:03:52.359Z [32minfo[39m: POST /v1/auth/signup 400 52 - 0.973 ms
+2023-12-28T14:05:41.286Z [32minfo[39m: POST /v1/auth/signup 201 348 - 882.197 ms
+2023-12-28T14:06:11.572Z [32minfo[39m: Server running on port 3001
+2023-12-28T14:06:14.556Z [32minfo[39m: MongoDB Connected
+2023-12-28T14:06:25.531Z [32minfo[39m: POST /v1/auth/signin 200 348 - 558.836 ms
+2023-12-28T14:06:33.594Z [32minfo[39m: POST /v1/auth/signin 200 348 - 569.099 ms
+2023-12-28T14:06:34.954Z [32minfo[39m: POST /v1/auth/signin 200 348 - 552.584 ms
+2023-12-28T14:13:21.629Z [32minfo[39m: POST /v1/auth/signin 200 348 - 541.044 ms
+2023-12-28T14:13:59.639Z [32minfo[39m: POST /v1/auth/signin 200 344 - 557.494 ms
+2023-12-28T14:15:38.749Z [32minfo[39m: POST /v1/community/me/owner 404 161 - 3.083 ms
+2023-12-28T14:15:43.826Z [32minfo[39m: GET /v1/community/me/owner 200 249 - 829.468 ms
+2023-12-28T14:15:50.785Z [32minfo[39m: GET /v1/community/me/owner 200 75 - 877.485 ms
+2023-12-28T14:15:54.207Z [32minfo[39m: GET /v1/community/me/owner 200 249 - 814.184 ms
+2023-12-28T14:16:26.120Z [32minfo[39m: GET /v1/member 404 148 - 4.139 ms
+2023-12-28T14:16:29.816Z [32minfo[39m: POST /v1/member 400 73 - 248.341 ms
+2023-12-28T14:17:33.703Z [32minfo[39m: POST /v1/member 400 110 - 547.044 ms
+2023-12-28T14:17:44.030Z [32minfo[39m: POST /v1/member 400 73 - 238.504 ms
+2023-12-28T14:17:56.074Z [32minfo[39m: POST /v1/member 400 73 - 720.336 ms
+2023-12-28T14:18:20.533Z [32minfo[39m: POST /v1/member 403 116 - 1500.825 ms
+2023-12-28T14:18:27.356Z [32minfo[39m: POST /v1/member 403 116 - 1624.799 ms
+2023-12-28T14:18:32.525Z [32minfo[39m: POST /v1/member 400 106 - 1878.472 ms
+2023-12-28T14:18:56.256Z [32minfo[39m: POST /v1/member 201 215 - 2181.204 ms
+2023-12-28T14:21:25.330Z [32minfo[39m: Server running on port 3000
+2023-12-28T14:21:34.656Z [32minfo[39m: MongoDB Connected
+2023-12-28T14:21:47.610Z [32minfo[39m: POST /v1/member 401 95 - 1.401 ms
+2023-12-28T14:23:02.087Z [32minfo[39m: Server running on port 3001
+2023-12-28T14:23:04.693Z [32minfo[39m: MongoDB Connected
+2023-12-28T14:23:11.640Z [32minfo[39m: POST /v1/member 400 106 - 1797.542 ms
+2023-12-28T14:23:21.853Z [32minfo[39m: POST /v1/member 400 106 - 2021.994 ms
+2023-12-28T14:33:17.729Z [32minfo[39m: Server running on port 3001
+2023-12-28T14:33:20.555Z [32minfo[39m: MongoDB Connected
+2023-12-28T14:34:05.064Z [32minfo[39m: Server running on port 3001
+2023-12-28T14:34:07.738Z [32minfo[39m: MongoDB Connected
+2023-12-28T14:34:48.180Z [32minfo[39m: DELETE /v1/member/658d80b42a8789862043e420 404 87 - 513.528 ms
+2023-12-28T14:35:44.168Z [32minfo[39m: DELETE /v1/member/658c89266701aea058f59d80 404 87 - 581.890 ms
+2023-12-28T14:35:50.926Z [32minfo[39m: DELETE /v1/member/658c89266701aea058f59d80 404 87 - 481.388 ms
+2023-12-28T14:36:22.835Z [32minfo[39m: DELETE /v1/member/:658c89266701aea058f59d80 500 160 - 246.153 ms
+2023-12-28T14:36:29.464Z [32minfo[39m: DELETE /v1/member/658c89266701aea058f59d80 404 87 - 507.785 ms
+2023-12-28T14:37:44.798Z [32minfo[39m: DELETE /v1/member/658d83cf09e38550692e6eae 500 92 - 1140.524 ms
+2023-12-28T14:38:58.559Z [32minfo[39m: DELETE /v1/member/658d83cf09e38550692e6eae 500 92 - 1041.203 ms
