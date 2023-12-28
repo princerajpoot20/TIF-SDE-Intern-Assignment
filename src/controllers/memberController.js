@@ -2,6 +2,7 @@ const Community = require('../models/Community');
 const User = require('../models/User');
 const Role = require('../models/Role');
 const Member = require('../models/Member');
+const mongoose = require('mongoose');
 
 exports.addMember = async (req, res) => {
     try {
@@ -93,6 +94,14 @@ exports.removeMember = async (req, res) => {
         const memberId = req.params.id;
         const requestorId = req.user._id; // Signed-in user ID
 
+        // Check if member ID is valid
+        if (!mongoose.Types.ObjectId.isValid(memberId)) {
+            return res.status(400).json({
+                status: false,
+                errors: [{ message: "Invalid member ID format.", code: "INVALID_ID_FORMAT" }]
+            });
+        }
+
         // Find the member to be removed
         const memberToRemove = await Member.findById(memberId);
         if (!memberToRemove) {
@@ -102,10 +111,21 @@ exports.removeMember = async (req, res) => {
             });
         }
 
-        // Check if requestor is Community Admin or Moderator
+        // Check if Community Admin role exists
         const adminRole = await Role.findOne({ name: 'Community Admin' });
-        const moderatorRole = await Role.findOne({ name: 'Community Moderator' });
+        if (!adminRole) {
+            console.error('Admin role not found in the database');
+            return res.status(500).json({ message: 'Internal server error' });
+        }
 
+        // Check if Community Moderator role exists
+        const moderatorRole = await Role.findOne({ name: 'Community Moderator' });
+        if (!moderatorRole) {
+            console.error('Moderator role not found in the database');
+            return res.status(500).json({ message: 'Internal server error' });
+        }
+
+        // Check if requestor is Community Admin or Moderator
         const isAdminOrModerator = await Member.findOne({
             community: memberToRemove.community,
             user: requestorId,
@@ -120,7 +140,7 @@ exports.removeMember = async (req, res) => {
         }
 
         // Remove the member
-        await memberToRemove.remove();
+        await Member.deleteOne({ _id: memberId });
 
         res.status(200).json({ status: true });
     } catch (error) {
@@ -128,4 +148,3 @@ exports.removeMember = async (req, res) => {
         res.status(500).json({ message: 'Internal server error', error: error.message });
     }
 };
-
